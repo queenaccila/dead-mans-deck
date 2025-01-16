@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba39571378652444ba0a26363da1f8a, type: 3}
   m_Name: TestDeck
   m_EditorClassIdentifier: 
-  bossCards: []
+  bossCards:
+  - {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}

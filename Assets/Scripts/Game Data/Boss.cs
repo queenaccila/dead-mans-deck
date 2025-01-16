@@ -3,8 +3,8 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     public BossDeck bossDeck;
-    public int maxBossHealth;
-    public int currentBossHealth;
+    public int maxBossHealth = 100;
+    public int currentBossHealth = 100;
     public int bossAtkHelper;
     public int bossDefHelper;
     

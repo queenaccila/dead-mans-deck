@@ -5,8 +5,7 @@ public class LevelManager : MonoBehaviour
     public Player player;
     public PlayerDeck playerDeck; // the player deck using player prefab
     public Boss boss; // data on the boss
-    public BossDeck bossDeck; // deck the boss will use
-    public bool IsPlayerTurn; // checks to see if it's player's turn or not
+    public bool IsPlayerTurn = true; // checks to see if it's player's turn or not
 
     public bool GameStart = false;
     public bool GameFinish = false;

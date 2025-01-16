@@ -4,8 +4,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
-    public int maxHealth; // max health
-    public int currentHealth; // current health to change dynamically
+    public int maxHealth = 100; // max health
+    public int currentHealth = 100; // current health to change dynamically
     // list of all current effects on player
     public List<CardData.CardEffect> currentEffects = new List<CardData.CardEffect>();
     public int attackHelper;
