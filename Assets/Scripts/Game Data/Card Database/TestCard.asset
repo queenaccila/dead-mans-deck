@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 0
   cardName: Test
-  type: 0
+  type: 2
   effect: 0
   rarity: 0
   value: 10
