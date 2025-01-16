@@ -36,6 +36,7 @@ public class Card
     }
 
     // public variables to declare for a card
+    public int cardID;
     public string cardName;
     public CardType type;
     public CardEffect effect;
@@ -43,8 +44,9 @@ public class Card
     public int value;
 
     // card constructor
-    public Card(string name, CardType type, CardEffect effect, CardRarity rarity, int value)
+    public Card(int id, string name, CardType type, CardEffect effect, CardRarity rarity, int value)
     {
+        this.cardID = id;
         this.cardName = name;
         this.type = type;
         this.effect = effect;

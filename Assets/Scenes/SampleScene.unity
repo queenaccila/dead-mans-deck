@@ -2059,11 +2059,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923fb37a4943ebd48acfead3da399c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: 
+  player: {fileID: 0}
+  Name: 
   type: 0
   effect: 0
   rarity: 0
-  value: 0
+  Value: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,5 +3218,5 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 354853427}
   - {fileID: 425893474}
-  - {fileID: 1098157219}
   - {fileID: 1811975415}
+  - {fileID: 1098157219}
