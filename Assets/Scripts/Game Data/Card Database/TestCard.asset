@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TestCard
   m_EditorClassIdentifier: 
   cardID: 0
-  cardName: 
+  cardName: Test
   type: 0
   effect: 0
   rarity: 0
-  value: 0
+  value: 10

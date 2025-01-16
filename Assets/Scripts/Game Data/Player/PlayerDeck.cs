@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerDeck : MonoBehaviour
 {
+    public static PlayerDeck Instance { get; private set;} // singleton instance
     public List<CardData> playerDeck = new List<CardData>(); // current cards in deck
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +15,22 @@ public class PlayerDeck : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // checking singleton instances
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        // to ensure only one instance exists
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // adds a new card to the deck list

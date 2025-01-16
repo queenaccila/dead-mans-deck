@@ -8,5 +8,4 @@ public class BossData : ScriptableObject
     public int currentHealth; // current health value to measure in-game
     public int attackHelper; // adds onto card attack if needed
     public int defenseHelper; // current defense to prevent player attacks
-    public List<CardData.CardEffect> currentEffects = new List<CardData.CardEffect>(); // list of all current effects
 }
