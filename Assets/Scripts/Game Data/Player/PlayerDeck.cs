@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 
 public class PlayerDeck : MonoBehaviour
@@ -17,16 +16,21 @@ public class PlayerDeck : MonoBehaviour
         
     }
 
-    // adds a new card to the deck
+    // adds a new card to the deck list
     public void AddCard(CardData card)
     {
-        
+        playerDeck.Add(card);
     }
 
     // creates a random card from the current list
-    public int RandomCard()
+    public CardData RandomCard()
     {
-        int cardIndex = 0;
-        return cardIndex; // returns index of list
+        if(playerDeck.Count == 0)
+        {
+            return null;
+        }
+
+        int randomIndex = Random.Range(0, playerDeck.Count);
+        return playerDeck[randomIndex];
     }
 }
