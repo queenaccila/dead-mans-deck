@@ -1044,7 +1044,8 @@ Transform:
   m_LocalPosition: {x: 0.46006644, y: 1.9518458, z: -0.0063925683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1200635780}
   m_Father: {fileID: 2145157337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &174360202
@@ -1070,9 +1071,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 59
-        y: 151
-        width: 161.375
+        x: 64.96094
+        y: 165
+        width: 155.215
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1082,7 +1083,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Current Card
+        toState: Burn Check
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1141,13 +1142,13 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
     - name: Check Modifiers
-      description: Checks extra defense, attacks, turns, etc
+      description: Checks extra attacks
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 627.52344
-        y: 76.671875
-        width: 204.91
+        x: 786.58594
+        y: 60.460938
+        width: 140.54001
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1203,20 +1204,20 @@ MonoBehaviour:
         paramByteDataSize: 
     - name: Current Card
       description: The card the player chose
-      colorIndex: 0
+      colorIndex: 2
       position:
         serializedVersion: 2
-        x: 364
-        y: 160
-        width: 144.665
+        x: 1012.96875
+        y: 130.60156
+        width: 151.26
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
+          name: CardSelected
+          isSystemEvent: 0
           isGlobal: 0
         toState: Check Modifiers
         linkStyle: 0
@@ -1267,8 +1268,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 452.0547
-        y: 54.765625
+        x: 575.1094
+        y: 77.453125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1328,9 +1329,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 276
-        y: 85
-        width: 125.13
+        x: 351.33594
+        y: 104.28906
+        width: 121.37
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1401,11 +1402,506 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: Burn Check
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 375.39062
+        y: 181.50781
+        width: 100
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Poison Check
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Affected
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Burn Effect
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: IsBurning
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Affected
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Poison Check
+      description: 
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 607.47656
+        y: 186.09375
+        width: 110.48
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Card Selection
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Affected
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Poison Effect
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: IsPoisoned
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Affected
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Burn Effect
+      description: 
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 355.9453
+        y: 292.5625
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: BurnCam
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Poison Check
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntSubtract
+        - HutongGames.PlayMaker.Actions.IntSubtract
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000400000008000000
+        actionHashCodes: 31e5da0231e5da02ca51e900
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PlayFeedbacks
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: MoreMountains.Feedbacks.MMF_Player
+          value: {fileID: 1200635781}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Burn Turns
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Health
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 100
+        - useVariable: 1
+          name: Current Burn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000010000001000000010000000010000000100000018000000120000000c000000270000000100000001000000
+        paramName:
+        - intVariable
+        - subtract
+        - everyFrame
+        - perSecond
+        - intVariable
+        - subtract
+        - everyFrame
+        - perSecond
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 0000000001000000000000000100000002000000030000000200000003000000000000000000000000000000000000000400000005000000
+        paramByteDataSize: 0000000000000000010000000100000000000000000000000100000001000000000000000000000000000000000000000100000001000000
+    - name: Poison Effect
+      description: 
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 593.375
+        y: 291.10156
+        width: 111.41
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Card Selection
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntSubtract
+        - HutongGames.PlayMaker.Actions.IntSubtract
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000004000000
+        actionHashCodes: 31e5da0231e5da02
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Poison Turns
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Health
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 100
+        - useVariable: 1
+          name: Current Poison
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1000000010000000010000000100000010000000100000000100000001000000
+        paramName:
+        - intVariable
+        - subtract
+        - everyFrame
+        - perSecond
+        - intVariable
+        - subtract
+        - everyFrame
+        - perSecond
+        paramDataPos: 0000000001000000000000000100000002000000030000000200000003000000
+        paramByteDataSize: 0000000000000000010000000100000000000000000000000100000001000000
+    - name: Card Selection
+      description: Start card select
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 804
+        y: 193
+        width: 125.725006
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Current Card
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 27fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: PickCard
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000
+        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
       isGlobal: 0
+    - name: Affected
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Finish Turn
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: BurnCam
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: CardSelected
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -1413,11 +1909,23 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: Health
+        name: Attack Add
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 100
+        value: 0
+      - useVariable: 1
+        name: Burn Turns
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Current Burn
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       - useVariable: 1
         name: Defense Add
         tooltip: 
@@ -1425,12 +1933,42 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: Attack Add
+        name: Health
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 100
+      - useVariable: 1
+        name: Poison Turns
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
-      boolVariables: []
+      - useVariable: 1
+        name: Current Poison
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      boolVariables:
+      - useVariable: 1
+        name: IsBurning
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 1
+      - useVariable: 1
+        name: IsPoisoned
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: PickCard
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -1445,7 +1983,9 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      - Burn
+      - Poison
+      variableCategoryIDs: 00000000010000000100000000000000000000000200000002000000010000000200000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -1714,8 +2254,8 @@ MonoBehaviour:
         RandomizeRemap: 0
         AnimatePositionDuration: 0.1
         AnimatePositionTween:
-          MMTweenDefinitionType: 1
-          MMTweenCurve: 4
+          MMTweenDefinitionType: 0
+          MMTweenCurve: 0
           Curve:
             serializedVersion: 2
             m_Curve:
@@ -2285,7 +2825,7 @@ Transform:
   m_GameObject: {fileID: 425893473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.86, y: -2.82, z: 0.055641063}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.768102, y: 8.768102, z: 8.768102}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2378,7 +2918,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 302.98438
-        y: 294.82812
+        y: 358.82812
         width: 186.745
         height: 32
       isBreakpoint: 0
@@ -2485,7 +3025,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 659.3203
-        y: 291.9375
+        y: 355.9375
         width: 127.56
         height: 48
       isBreakpoint: 0
@@ -2601,7 +3141,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 656.1875
-        y: 426.6172
+        y: 490.6172
         width: 113.28
         height: 32
       isBreakpoint: 0
@@ -2708,7 +3248,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1024.3828
-        y: 376.39844
+        y: 440.39844
         width: 171.975
         height: 32
       isBreakpoint: 0
@@ -2833,8 +3373,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 113.36719
-        y: 107.94531
+        x: 339.4297
+        y: 106.99219
         width: 106.99
         height: 32
       isBreakpoint: 0
@@ -2845,7 +3385,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Spawn From Pile
+        toState: Check Card Select
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -2854,16 +3394,26 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.BoolTest
         - HutongGames.PlayMaker.Actions.SetRotation
+        - HutongGames.PlayMaker.Actions.SetPosition2d
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: a4c8bf00979e4104
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000040000000d000000
+        actionHashCodes: a4c8bf00979e41040cf26a00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 425893473}
         - ownerOption: 1
           gameObject:
             useVariable: 0
@@ -2902,6 +3452,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 7
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: -3
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
@@ -2910,7 +3472,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
-        fsmVector2Params: []
+        fsmVector2Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
         fsmVector3Params:
         - useVariable: 1
           name: 
@@ -2930,12 +3498,12 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         - 
-        byteData: 00000000000000
+        byteData: 00010000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1100000017000000170000000100000014000000230000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramDataType: 1100000017000000170000000100000014000000230000001c0000000f0000000f0000000f00000007000000010000000100000014000000250000000f0000000f000000070000000100000001000000
         paramName:
         - boolVariable
         - isTrue
@@ -2950,15 +3518,22 @@ MonoBehaviour:
         - space
         - everyFrame
         - lateUpdate
-        paramDataPos: 00000000000000000100000000000000000000000000000000000000000000000100000002000000010000000500000006000000
-        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000000000000040000000100000001000000
+        - gameObject
+        - vector
+        - x
+        - y
+        - space
+        - everyFrame
+        - lateUpdate
+        paramDataPos: 0000000000000000010000000000000000000000000000000000000000000000010000000200000001000000050000000600000001000000000000000300000004000000070000000b0000000c000000
+        paramByteDataSize: 0000000000000000000000000100000000000000000000000000000000000000000000000000000004000000010000000100000000000000000000000000000000000000040000000100000001000000
     - name: Frozen Filter
       description: Determine what feedbacks to play
       colorIndex: 1
       position:
         serializedVersion: 2
         x: 434
-        y: 403
+        y: 467
         width: 167.315
         height: 48
       isBreakpoint: 0
@@ -3075,7 +3650,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 90
-        y: 433
+        y: 497
         width: 158.99
         height: 32
       isBreakpoint: 0
@@ -3182,7 +3757,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 65
-        y: 335
+        y: 399
         width: 167.58
         height: 48
       isBreakpoint: 0
@@ -3252,7 +3827,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 848.15625
-        y: 503.76562
+        y: 567.7656
         width: 109.47
         height: 32
       isBreakpoint: 0
@@ -3359,7 +3934,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1019.78125
-        y: 495.22656
+        y: 559.22656
         width: 112.73
         height: 48
       isBreakpoint: 0
@@ -3429,7 +4004,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 845.7031
-        y: 375.33594
+        y: 439.33594
         width: 106.57
         height: 16
       isBreakpoint: 0
@@ -3606,7 +4181,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 646.03125
-        y: 489.03125
+        y: 553.03125
         width: 142.95999
         height: 32
       isBreakpoint: 0
@@ -3678,8 +4253,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 335.8672
-        y: 110.67969
+        x: 333.89062
+        y: 261.70312
         width: 127.35
         height: 32
       isBreakpoint: 0
@@ -3780,6 +4355,114 @@ MonoBehaviour:
         - manualUI
         paramDataPos: 000000000000000000000000000000000000000001000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000
+    - name: Check Card Select
+      description: See if card selection is true
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 319.04688
+        y: 171.04688
+        width: 163.95
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Spawn From Pile
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 68fece05a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 174360198}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PickCard
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: CardSelect
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: CardSelect
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - 
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -3846,6 +4529,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: CardSelect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -3867,7 +4556,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -4011,7 +4700,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -4068,7 +4757,7 @@ Camera:
   field of view: 34
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4092,12 +4781,123 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &523020604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523020605}
+  - component: {fileID: 523020607}
+  - component: {fileID: 523020609}
+  m_Layer: 0
+  m_Name: PostProcess
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &523020605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523020604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1953933, y: 0.4037575, z: 0.06562134}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &523020607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523020604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 4ec2446f1ff98214b8403e7d04469976, type: 2}
+--- !u!114 &523020609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523020604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d01154bce0123949a8800d85a063092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  ShakeDuration: 0.2
+  PlayOnAwake: 0
+  PermanentShake: 0
+  Interruptible: 1
+  AlwaysResetTargetValuesAfterShake: 0
+  OnlyUseShakerValues: 0
+  CooldownBetweenShakes: 0
+  Shaking: 0
+  ForwardDirection: 1
+  TimescaleMode: 0
+  RelativeIntensity: 0
+  ShakeIntensity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapIntensityZero: 0
+  RemapIntensityOne: 1
 --- !u!1 &562665585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,7 +4924,7 @@ Transform:
   m_GameObject: {fileID: 562665585}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4155,7 +4955,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 413
-        y: 311
+        y: 439
         width: 162.265
         height: 80
       isBreakpoint: 0
@@ -4193,7 +4993,7 @@ MonoBehaviour:
           name: Special
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 2
+        toState: Special Card
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4434,7 +5234,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 722
-        y: 205.92969
+        y: 333.9297
         width: 100.59
         height: 32
       isBreakpoint: 0
@@ -4711,7 +5511,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 411.8047
-        y: 201.92188
+        y: 329.92188
         width: 170.5
         height: 32
       isBreakpoint: 0
@@ -4772,7 +5572,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 931.7031
-        y: 156.71094
+        y: 284.71094
         width: 141.35
         height: 32
       isBreakpoint: 0
@@ -4866,8 +5666,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 419
-        y: 102.99219
+        x: 421.125
+        y: 108.64844
         width: 156.975
         height: 32
       isBreakpoint: 0
@@ -4878,7 +5678,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Selected Card
+        toState: Card Pick
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -4942,7 +5742,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 717.5625
-        y: 271.14062
+        y: 399.14062
         width: 110.38
         height: 32
       isBreakpoint: 0
@@ -5212,14 +6012,14 @@ MonoBehaviour:
         - sendToUnityLog
         paramDataPos: 00000000000000000000000000000000010000000000000001000000010000000200000002000000030000000000000007000000
         paramByteDataSize: 00000000010000000000000000000000000000000000000001000000000000000000000001000000040000000000000001000000
-    - name: State 2
-      description: 
+    - name: Special Card
+      description: Will add in extra states for various special cards
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 724
-        y: 425
-        width: 100
+        x: 698.72656
+        y: 554.10156
+        width: 207.685
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -5270,7 +6070,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 721.46094
-        y: 343.91406
+        y: 471.91406
         width: 105.98
         height: 32
       isBreakpoint: 0
@@ -5546,7 +6346,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 58.078125
-        y: 219.9375
+        y: 347.9375
         width: 219.105
         height: 48
       isBreakpoint: 0
@@ -5624,6 +6424,114 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
+    - name: Card Pick
+      description: Check if cards can be selected
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 422.34375
+        y: 213.10938
+        width: 155.67
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Selected Card
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 68fece05a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 174360198}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: PickCard
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: Player Card Selected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Player Card Selected
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - 
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
     events:
     - name: Attack
       isSystemEvent: 0
@@ -5705,6 +6613,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
+      - useVariable: 1
+        name: Player Card Selected
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -5736,7 +6650,7 @@ MonoBehaviour:
       - Boss
       - Card Data
       - Player
-      variableCategoryIDs: 0300000002000000010000000300000002000000020000000200000002000000
+      variableCategoryIDs: 030000000200000001000000030000000200000002000000030000000200000002000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -6755,8 +7669,8 @@ MonoBehaviour:
         Mode: 0
         RotationSpace: 0
         AnimateRotationDuration: 0.1
-        RemapCurveZero: 90
-        RemapCurveOne: 0
+        RemapCurveZero: 0
+        RemapCurveOne: 180
         AnimateX: 0
         AnimateRotationTweenX:
           MMTweenDefinitionType: 1
@@ -7033,6 +7947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1107330188}
+  - component: {fileID: 1107330189}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -7055,6 +7970,147 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2145157337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107330189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107330187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: State 1
+    states:
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
 --- !u!1 &1161667432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,6 +8547,272 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
+--- !u!1 &1200635779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200635780}
+  - component: {fileID: 1200635781}
+  m_Layer: 0
+  m_Name: BurnFeedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1200635780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200635779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 174360199}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1200635781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200635779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks: []
+  InitializationMode: 2
+  AutoInitialization: 1
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  TimescaleMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnChangeDirection:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 174360202}
+          m_TargetAssemblyTypeName: PlayMakerFSM, PlayMaker
+          m_MethodName: SendEvent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: BurnCam
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnRestoreInitialValues:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    OnInitializationComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    OnEnable:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDisable:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+  InScriptDrivenPause: 0
+  FeedbacksList:
+  - rid: 6304570370204893608
+  KeepPlayModeChanges: 0
+  PerformanceMode: 0
+  RestoreInitialValuesOnDisable: 0
+  StopFeedbacksOnDisable: 0
+  PlayCount: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 6304570370204893608
+      type: {class: MMF_ChromaticAberration_URP, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
+      data:
+        Active: 1
+        UniqueID: -2017432487
+        Label: Chromatic Aberration URP
+        OriginalLabel: Chromatic Aberration URP
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          PlayCount: 0
+          LimitPlayCount: 0
+          MaxPlayCount: 3
+          SetPlayCountToZeroOnReset: 0
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        AutomaticShakerSetupButton:
+          ButtonText: Automatic Shaker Setup
+        Owner: {fileID: 1200635781}
+        DebugActive: 0
+        Duration: 0.5
+        ResetShakerValuesAfterShake: 1
+        ResetTargetValuesAfterShake: 1
+        RemapIntensityZero: 0
+        RemapIntensityOne: 0.25
+        Intensity:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RelativeIntensity: 0
 --- !u!1 &1351879706
 GameObject:
   m_ObjectHideFlags: 0
@@ -7746,20 +9068,11 @@ MonoBehaviour:
         x: 302.0625
         y: 100
         width: 100
-        height: 32
+        height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Boss Turn
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
+      transitions: []
       actionData:
         actionNames: []
         customNames: []
@@ -7931,8 +9244,8 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 72.75781
-        y: 565.9297
+        x: 258.72656
+        y: 594.5625
         width: 100.6
         height: 48
       isBreakpoint: 0
@@ -8042,8 +9355,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 652.4453
-        y: 582.7344
+        x: 1149.7656
+        y: 586.8594
         width: 100
         height: 48
       isBreakpoint: 0
@@ -8054,7 +9367,7 @@ MonoBehaviour:
           name: PlayerStart
           isSystemEvent: 0
           isGlobal: 1
-        toState: Player Skip
+        toState: Player Stun
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -8153,8 +9466,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 362.77344
-        y: 378.53906
+        x: 691.0078
+        y: 305.77344
         width: 100
         height: 48
       isBreakpoint: 0
@@ -8237,7 +9550,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 410.8672
+        x: 730.8672
         y: 754.4531
         width: 187.8
         height: 16
@@ -8289,7 +9602,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 653.64844
+        x: 973.64844
         y: 742.89844
         width: 126.8
         height: 32
@@ -8367,8 +9680,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 53.703125
-        y: 743.8672
+        x: 427.78125
+        y: 757.96875
         width: 200.06
         height: 16
       isBreakpoint: 0
@@ -8419,7 +9732,7 @@ MonoBehaviour:
       colorIndex: 1
       position:
         serializedVersion: 2
-        x: 213
+        x: 533
         y: 681
         width: 162.18
         height: 32
@@ -8527,8 +9840,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 459.40625
-        y: 676.9219
+        x: 795.40625
+        y: 678.9219
         width: 153.17
         height: 32
       isBreakpoint: 0
@@ -8601,14 +9914,14 @@ MonoBehaviour:
         - perSecond
         paramDataPos: 00000000010000000000000001000000
         paramByteDataSize: 00000000000000000100000001000000
-    - name: Player Skip
-      description: Checks if player skips turn
-      colorIndex: 1
+    - name: Player Stun
+      description: Checks if player skips turn (stun)
+      colorIndex: 2
       position:
         serializedVersion: 2
-        x: 238.94531
-        y: 478.125
-        width: 141.19
+        x: 538.7578
+        y: 447.90625
+        width: 161.245
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -8696,11 +10009,11 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000000000000000000000000000001000000
     - name: Boss Skip
       description: Checks if boss skips turn
-      colorIndex: 7
+      colorIndex: 6
       position:
         serializedVersion: 2
-        x: 459.09375
-        y: 472.7422
+        x: 789.71875
+        y: 452.58594
         width: 132.8
         height: 48
       isBreakpoint: 0
@@ -8792,7 +10105,7 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 337.79688
+        x: 657.7969
         y: 111.50781
         width: 166.505
         height: 48
@@ -8876,7 +10189,7 @@ MonoBehaviour:
       colorIndex: 5
       position:
         serializedVersion: 2
-        x: 571.78906
+        x: 891.78906
         y: 119.28906
         width: 141.35
         height: 32
@@ -8951,8 +10264,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 348.1875
-        y: 257.51562
+        x: 668.1875
+        y: 219.51562
         width: 145.48999
         height: 32
       isBreakpoint: 0
@@ -9035,6 +10348,18 @@ MonoBehaviour:
     - name: End Cutscene
       isSystemEvent: 0
       isGlobal: 0
+    - name: Affected
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Not Affected
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Poisoned
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Burned
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions: []
     variables:
       floatVariables: []
@@ -9052,6 +10377,12 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
+        name: Boss Value Turns
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
         name: Player Health
         tooltip: 
         showInInspector: 0
@@ -9063,15 +10394,21 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 1
+      - useVariable: 1
+        name: Player Value Turns
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables:
       - useVariable: 1
-        name: Has Cutscene
+        name: Cutscene Playing
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: Cutscene Playing
+        name: Has Cutscene
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -9087,12 +10424,20 @@ MonoBehaviour:
       materialVariables: []
       textureVariables: []
       arrayVariables: []
-      enumVariables: []
+      enumVariables:
+      - useVariable: 1
+        name: Player Effect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        enumName: CardData+CardEffect
+        intValue: 0
       categories:
       - 
       - Boss
+      - Cutscene
       - Player
-      variableCategoryIDs: 010000000100000002000000020000000000000000000000
+      variableCategoryIDs: 010000000100000001000000030000000300000003000000020000000200000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -9185,4 +10530,5 @@ SceneRoots:
   - {fileID: 354853427}
   - {fileID: 2145157337}
   - {fileID: 562665586}
+  - {fileID: 523020605}
   - {fileID: 1098157219}
