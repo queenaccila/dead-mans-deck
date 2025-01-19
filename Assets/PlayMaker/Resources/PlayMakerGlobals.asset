@@ -21,6 +21,24 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: PlayerHealth
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: PlayerDefense
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: PlayerAttack
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     boolVariables:
     - useVariable: 1
       name: PlayerTurn
@@ -38,10 +56,38 @@ MonoBehaviour:
     objectVariables: []
     materialVariables: []
     textureVariables: []
-    arrayVariables: []
+    arrayVariables:
+    - useVariable: 1
+      name: PlayerDeck
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 12
+      objectTypeName: CardData
+      floatValues: []
+      intValues: 
+      boolValues: 
+      stringValues: []
+      vector4Values: []
+      objectReferences:
+      - {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+    - useVariable: 1
+      name: Bosses Defeated
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 2
+      objectTypeName: UnityEngine.Object
+      floatValues: []
+      intValues: 
+      boolValues: 00000000000000000000
+      stringValues: []
+      vector4Values: []
+      objectReferences: []
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000000000000000000000000000
+    - Player
+    variableCategoryIDs: 0100000001000000010000000100000001000000010000000000000002000000020000000000000002000000000000000000000000000000
   events:
   - PlayerStart

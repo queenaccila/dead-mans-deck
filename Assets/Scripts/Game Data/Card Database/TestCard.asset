@@ -18,3 +18,4 @@ MonoBehaviour:
   effect: 0
   rarity: 0
   value: 10
+  sprite: {fileID: 2519233111475243274, guid: 13ecc79e15985ce489610247b0c6f825, type: 3}

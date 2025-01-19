@@ -42,4 +42,5 @@ public class CardData : ScriptableObject
     public CardEffect effect;
     public CardRarity rarity;
     public int value;
+    public Sprite sprite;
 }

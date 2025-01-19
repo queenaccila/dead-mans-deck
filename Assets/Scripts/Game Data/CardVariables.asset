@@ -15,3 +15,5 @@ MonoBehaviour:
   VariableTypesDefinition:
   - Name: Card
     Type: CardData
+  - Name: Boss Deck
+    Type: BossDeck

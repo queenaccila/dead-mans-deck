@@ -692,7 +692,19 @@ MonoBehaviour:
         m_Calls: []
     OnComplete:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1107330189}
+          m_TargetAssemblyTypeName: PlayMakerFSM, PlayMaker
+          m_MethodName: SendEvent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: DiscardedCard
+            m_BoolArgument: 0
+          m_CallState: 2
     OnRestoreInitialValues:
       m_PersistentCalls:
         m_Calls: []
@@ -1041,12 +1053,12 @@ Transform:
   m_GameObject: {fileID: 174360198}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46006644, y: 1.9518458, z: -0.0063925683}
+  m_LocalPosition: {x: 0.33895555, y: 1.0383912, z: -0.024095327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1200635780}
-  m_Father: {fileID: 2145157337}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &174360202
 MonoBehaviour:
@@ -1072,7 +1084,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64.96094
-        y: 165
+        y: 181
         width: 155.215
         height: 32
       isBreakpoint: 0
@@ -1142,13 +1154,13 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
     - name: Check Modifiers
-      description: Checks extra attacks
+      description: Checks extra modifiers
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 786.58594
-        y: 60.460938
-        width: 140.54001
+        x: 810.58594
+        y: 54.460938
+        width: 146.48001
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1207,8 +1219,8 @@ MonoBehaviour:
       colorIndex: 2
       position:
         serializedVersion: 2
-        x: 1012.96875
-        y: 130.60156
+        x: 800.96875
+        y: 145.60156
         width: 151.26
         height: 32
       isBreakpoint: 0
@@ -1268,8 +1280,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 575.1094
-        y: 77.453125
+        x: 573.1094
+        y: 78.453125
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1330,7 +1342,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 351.33594
-        y: 104.28906
+        y: 120.28906
         width: 121.37
         height: 32
       isBreakpoint: 0
@@ -1408,7 +1420,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 375.39062
-        y: 181.50781
+        y: 197.50781
         width: 100
         height: 48
       isBreakpoint: 0
@@ -1492,7 +1504,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 607.47656
-        y: 186.09375
+        y: 202.09375
         width: 110.48
         height: 48
       isBreakpoint: 0
@@ -1503,7 +1515,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Card Selection
+        toState: Current Card
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1576,7 +1588,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 355.9453
-        y: 292.5625
+        y: 308.5625
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1719,7 +1731,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 593.375
-        y: 291.10156
+        y: 307.10156
         width: 111.41
         height: 32
       isBreakpoint: 0
@@ -1730,7 +1742,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Card Selection
+        toState: Current Card
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -1810,84 +1822,6 @@ MonoBehaviour:
         - perSecond
         paramDataPos: 0000000001000000000000000100000002000000030000000200000003000000
         paramByteDataSize: 0000000000000000010000000100000000000000000000000100000001000000
-    - name: Card Selection
-      description: Start card select
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 804
-        y: 193
-        width: 125.725006
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: Current Card
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        customNames:
-        - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 27fbe103
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: PickCard
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams: []
-        byteData: 00
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 110000001100000001000000
-        paramName:
-        - boolVariable
-        - boolValue
-        - everyFrame
-        paramDataPos: 000000000100000000000000
-        paramByteDataSize: 000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -1963,12 +1897,6 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      - useVariable: 1
-        name: PickCard
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -1985,7 +1913,7 @@ MonoBehaviour:
       - 
       - Burn
       - Poison
-      variableCategoryIDs: 00000000010000000100000000000000000000000200000002000000010000000200000000000000
+      variableCategoryIDs: 000000000100000001000000000000000000000002000000020000000100000002000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -2797,6 +2725,37 @@ MonoBehaviour:
         MoveToRotationMax: {x: 90, y: 0, z: 0}
         BumpRotationMin: {x: 0, y: 0, z: -1000}
         BumpRotationMax: {x: 0, y: 0, z: 1000}
+--- !u!1 &414873875
+GameObject:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414873876}
+  m_Layer: 0
+  m_Name: //Game Pieces
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 2800000, guid: 4724f3b6006a28f4ca8f7de7bf926d39, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &414873876
+Transform:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414873875}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &425893473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,8 +2785,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.768102, y: 8.768102, z: 8.768102}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 9, y: 8.999999, z: 8.999999}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 189574893}
   - {fileID: 1161667433}
@@ -2910,7 +2869,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: Player's Turn
+    startState: Create Front Card
     states:
     - name: Mouse Hover Off
       description: Returning position after mouse is off
@@ -2918,7 +2877,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 302.98438
-        y: 358.82812
+        y: 422.82812
         width: 186.745
         height: 32
       isBreakpoint: 0
@@ -3025,7 +2984,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 659.3203
-        y: 355.9375
+        y: 419.9375
         width: 127.56
         height: 48
       isBreakpoint: 0
@@ -3141,7 +3100,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 656.1875
-        y: 490.6172
+        y: 554.6172
         width: 113.28
         height: 32
       isBreakpoint: 0
@@ -3248,7 +3207,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1024.3828
-        y: 440.39844
+        y: 504.39844
         width: 171.975
         height: 32
       isBreakpoint: 0
@@ -3373,8 +3332,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 339.4297
-        y: 106.99219
+        x: 341.4297
+        y: 170.97656
         width: 106.99
         height: 32
       isBreakpoint: 0
@@ -3533,7 +3492,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 434
-        y: 467
+        y: 531
         width: 167.315
         height: 48
       isBreakpoint: 0
@@ -3650,7 +3609,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 90
-        y: 497
+        y: 561
         width: 158.99
         height: 32
       isBreakpoint: 0
@@ -3757,7 +3716,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 65
-        y: 399
+        y: 463
         width: 167.58
         height: 48
       isBreakpoint: 0
@@ -3827,7 +3786,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 848.15625
-        y: 567.7656
+        y: 631.7656
         width: 109.47
         height: 32
       isBreakpoint: 0
@@ -3934,7 +3893,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1019.78125
-        y: 559.22656
+        y: 623.22656
         width: 112.73
         height: 48
       isBreakpoint: 0
@@ -4004,7 +3963,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 845.7031
-        y: 439.33594
+        y: 503.33594
         width: 106.57
         height: 16
       isBreakpoint: 0
@@ -4181,7 +4140,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 646.03125
-        y: 553.03125
+        y: 617.03125
         width: 142.95999
         height: 32
       isBreakpoint: 0
@@ -4254,7 +4213,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 333.89062
-        y: 261.70312
+        y: 325.70312
         width: 127.35
         height: 32
       isBreakpoint: 0
@@ -4361,7 +4320,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 319.04688
-        y: 171.04688
+        y: 235.04688
         width: 163.95
         height: 32
       isBreakpoint: 0
@@ -4379,45 +4338,23 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmBool
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05a4c8bf00
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 174360198}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: PickCard
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4426,13 +4363,7 @@ MonoBehaviour:
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
-          name: CardSelect
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: CardSelect
+          name: Discarded
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -4443,26 +4374,237 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams:
-        - FINISHED
         - 
-        byteData: 0000
+        - FINISHED
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramDataType: 11000000170000001700000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
-        - everyFrame
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Create Front Card
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 334
+        y: 104
+        width: 135.4
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Player's Turn
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetProperty
+        - HutongGames.PlayMaker.Actions.SetSprite
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 5ac85204fc838600
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 1
+            name: Card Data
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData
+            value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+          TargetTypeName: CardData
+          PropertyName: sprite
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 1
+            name: MainCard
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.Sprite
+            value: {fileID: 5826479529469629657, guid: 4a409375a05867f4e9e524dc692e1552, type: 3}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: 
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: MainCard
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.Sprite
+          value: {fileID: 5826479529469629657, guid: 4a409375a05867f4e9e524dc692e1552, type: 3}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 24000000010000001400000018000000
+        paramName:
+        - targetProperty
+        - everyFrame
+        - gameObject
+        - sprite
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000010000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -4529,12 +4671,6 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      - useVariable: 1
-        name: CardSelect
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
       stringVariables: []
       vector2Variables: []
       vector3Variables: []
@@ -4550,13 +4686,27 @@ MonoBehaviour:
         networkSync: 0
         typeName: UnityEngine.Sprite
         value: {fileID: 2379000817820330958, guid: 6b0903144eb1a5e47b8df0a4df5ff0a9, type: 3}
+      - useVariable: 1
+        name: MainCard
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: UnityEngine.Sprite
+        value: {fileID: 5826479529469629657, guid: 4a409375a05867f4e9e524dc692e1552, type: 3}
+      - useVariable: 1
+        name: Card Data
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: CardData
+        value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -4908,8 +5058,9 @@ GameObject:
   m_Component:
   - component: {fileID: 562665586}
   - component: {fileID: 562665587}
+  - component: {fileID: 562665588}
   m_Layer: 0
-  m_Name: Card
+  m_Name: Card_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4955,7 +5106,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 413
-        y: 439
+        y: 455
         width: 162.265
         height: 80
       isBreakpoint: 0
@@ -5234,7 +5385,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 722
-        y: 333.9297
+        y: 349.9297
         width: 100.59
         height: 32
       isBreakpoint: 0
@@ -5253,29 +5404,19 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetProperty
-        - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.IntSubtract
         - HutongGames.PlayMaker.Actions.DebugFsmVariable
         customNames:
         - 
         - 
         - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000002000000070000000b000000
-        actionHashCodes: 5ac85204081bbf0531e5da0232f77204
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000006000000
+        actionHashCodes: 5ac8520431e5da0232f77204
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 1351879706}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -5414,22 +5555,10 @@ MonoBehaviour:
             objectReferences: []
           setProperty: 0
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Boss Health
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams:
-        - variableName: Boss Health
+        - variableName: 
           objectType: UnityEngine.Object
           useVariable: 1
           type: 1
@@ -5458,13 +5587,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: Boss Health
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Boss Health
+          name: atk test filler
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5482,19 +5605,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000000000001
+        byteData: 0000000000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 2400000001000000140000001200000012000000100000000100000010000000100000000100000001000000070000002700000001000000
+        paramDataType: 240000000100000010000000100000000100000001000000070000002700000001000000
         paramName:
         - targetProperty
-        - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
         - everyFrame
         - intVariable
         - subtract
@@ -5503,15 +5621,15 @@ MonoBehaviour:
         - logLevel
         - variable
         - sendToUnityLog
-        paramDataPos: 0000000000000000000000000000000001000000000000000100000001000000020000000200000003000000040000000000000008000000
-        paramByteDataSize: 0000000001000000000000000000000000000000000000000100000000000000000000000100000001000000040000000000000001000000
+        paramDataPos: 000000000000000000000000010000000100000002000000030000000000000007000000
+        paramByteDataSize: 000000000100000000000000000000000100000001000000040000000000000001000000
     - name: Selected Card
       description: Transitions when card is selected
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 411.8047
-        y: 329.92188
+        y: 345.92188
         width: 170.5
         height: 32
       isBreakpoint: 0
@@ -5572,7 +5690,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 931.7031
-        y: 284.71094
+        y: 300.71094
         width: 141.35
         height: 32
       isBreakpoint: 0
@@ -5666,8 +5784,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 421.125
-        y: 108.64844
+        x: 416.97656
+        y: 109.52344
         width: 156.975
         height: 32
       isBreakpoint: 0
@@ -5678,7 +5796,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Card Pick
+        toState: Card Data Set
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -5742,7 +5860,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 717.5625
-        y: 399.14062
+        y: 415.14062
         width: 110.38
         height: 32
       isBreakpoint: 0
@@ -6018,7 +6136,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 698.72656
-        y: 554.10156
+        y: 570.10156
         width: 207.685
         height: 16
       isBreakpoint: 0
@@ -6070,7 +6188,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 721.46094
-        y: 471.91406
+        y: 487.91406
         width: 105.98
         height: 32
       isBreakpoint: 0
@@ -6089,29 +6207,17 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.GetProperty
-        - HutongGames.PlayMaker.Actions.GetFsmInt
         - HutongGames.PlayMaker.Actions.IntAdd
-        - HutongGames.PlayMaker.Actions.DebugFsmVariable
         customNames:
         - 
         - 
-        - 
-        - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000002000000070000000a000000
-        actionHashCodes: 5ac85204081bbf05603dd90532f77204
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 5ac85204603dd905
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 174360198}
+        fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -6250,57 +6356,15 @@ MonoBehaviour:
             objectReferences: []
           setProperty: 0
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: Health
+        fsmStringParams: []
         fsmObjectParams: []
-        fsmVarParams:
-        - variableName: Player Health
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 1
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
+        fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: Player Health
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Player Health
+          name: PlayerHealth
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -6318,35 +6382,27 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000000000001
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 24000000010000001400000012000000120000001000000001000000100000001000000001000000070000002700000001000000
+        paramDataType: 2400000001000000100000001000000001000000
         paramName:
         - targetProperty
-        - everyFrame
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
         - everyFrame
         - intVariable
         - add
         - everyFrame
-        - logLevel
-        - variable
-        - sendToUnityLog
-        paramDataPos: 00000000000000000000000000000000010000000000000001000000010000000200000002000000030000000000000007000000
-        paramByteDataSize: 00000000010000000000000000000000000000000000000001000000000000000000000001000000040000000000000001000000
+        paramDataPos: 0000000000000000000000000100000001000000
+        paramByteDataSize: 0000000001000000000000000000000001000000
     - name: Frozen Filter
       description: Checks if card is frozen or not before proceeding
       colorIndex: 1
       position:
         serializedVersion: 2
         x: 58.078125
-        y: 347.9375
+        y: 363.9375
         width: 219.105
         height: 48
       isBreakpoint: 0
@@ -6424,14 +6480,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Card Pick
-      description: Check if cards can be selected
+    - name: Card Data Set
+      description: Set new card data
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 422.34375
-        y: 213.10938
-        width: 155.67
+        x: 437.39062
+        y: 237.30469
+        width: 123.36
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -6448,90 +6504,451 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetFsmBool
-        - HutongGames.PlayMaker.Actions.BoolTest
+        - HutongGames.PlayMaker.Actions.GetProperty
+        - HutongGames.PlayMaker.Actions.GetProperty
+        - HutongGames.PlayMaker.Actions.GetProperty
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05a4c8bf00
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000200000004000000
+        actionHashCodes: 5ac852045ac852045ac85204
         unityObjectParams: []
         fsmGameObjectParams: []
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 1
+            name: Card
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData
+            value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+          TargetTypeName: CardData
+          PropertyName: type
+          BoolParameter:
             useVariable: 0
             name: 
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 174360198}
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData+CardType
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 1
+            name: Card Type
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: CardData+CardType
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
+        - TargetObject:
+            useVariable: 1
+            name: Card
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData
+            value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+          TargetTypeName: CardData
+          PropertyName: effect
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData+CardEffect
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 1
+            name: Card Effect
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: CardData+CardEffect
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
+        - TargetObject:
+            useVariable: 1
+            name: Card
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData
+            value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+          TargetTypeName: CardData
+          PropertyName: value
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 1
+            name: Card Value
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Int32
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            enumName: 
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
         layoutOptionParams: []
-        fsmStringParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: PickCard
+        fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
         fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: Player Card Selected
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: Player Card Selected
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        - 
-        byteData: 0000
+        stringParams: []
+        byteData: 000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
+        paramDataType: 240000000100000024000000010000002400000001000000
         paramName:
-        - gameObject
-        - fsmName
-        - variableName
-        - storeValue
+        - targetProperty
         - everyFrame
-        - boolVariable
-        - isTrue
-        - isFalse
+        - targetProperty
         - everyFrame
-        paramDataPos: 000000000000000001000000000000000000000001000000000000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000100000000000000000000000000000001000000
+        - targetProperty
+        - everyFrame
+        paramDataPos: 000000000000000001000000010000000200000002000000
+        paramByteDataSize: 000000000100000000000000010000000000000001000000
     events:
     - name: Attack
       isSystemEvent: 0
@@ -6577,19 +6994,7 @@ MonoBehaviour:
       floatVariables: []
       intVariables:
       - useVariable: 1
-        name: Player Health
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
         name: Card Value
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
-      - useVariable: 1
-        name: Boss Health
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6600,13 +7005,13 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      boolVariables:
       - useVariable: 1
-        name: Is Frozen
+        name: atk test filler
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
+      boolVariables:
       - useVariable: 1
         name: Discarded
         tooltip: 
@@ -6614,7 +7019,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: Player Card Selected
+        name: Is Frozen
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -6645,12 +7050,18 @@ MonoBehaviour:
         networkSync: 0
         enumName: CardData+CardType
         intValue: 0
+      - useVariable: 1
+        name: Card Effect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        enumName: CardData+CardEffect
+        intValue: 0
       categories:
       - 
-      - Boss
       - Card Data
       - Player
-      variableCategoryIDs: 030000000200000001000000030000000200000002000000030000000200000002000000
+      variableCategoryIDs: 0100000002000000000000000100000001000000010000000100000001000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -6698,6 +7109,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &562665588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562665585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a2e5a0073a4117afc017c66e213cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GUID: 596a088b-3a37-4812-800a-e41d8dd4b142
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -7931,12 +8355,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099403407}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12111089, y: -0.91345453, z: -0.017702758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2145157337}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107330187
 GameObject:
@@ -7948,6 +8372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1107330188}
   - component: {fileID: 1107330189}
+  - component: {fileID: 1107330190}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -7963,12 +8388,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107330187}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.12111089, y: -0.91345453, z: -0.017702758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2145157337}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1107330189
 MonoBehaviour:
@@ -7986,16 +8411,435 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 1
+    startState: Set Up Card Positions
     states:
-    - name: State 1
+    - name: Set Up Card Positions
+      description: Place Card Positions
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 157.54001
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Player's Turn
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Check Discard Pile
+      description: Checks if current card selected is in the discard pile
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 775.8594
+        y: 297.3125
+        width: 247.64499
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check Missing Card Position
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ArrayAdd
+        - HutongGames.PlayMaker.Actions.ArrayContains
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000002000000
+        actionHashCodes: 978a9b0375f9ba05
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams:
+        - variableName: Current Card
+          objectType: CardData
+          useVariable: 1
+          type: 12
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: Current Card
+          objectType: CardData
+          useVariable: 1
+          type: 12
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams:
+        - useVariable: 1
+          name: Discard Pile
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 12
+          objectTypeName: CardData
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        - useVariable: 1
+          name: Discard Pile
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          type: 12
+          objectTypeName: CardData
+          floatValues: []
+          intValues: 
+          boolValues: 
+          stringValues: []
+          vector4Values: []
+          objectReferences: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - FINISHED
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 2900000027000000290000002700000010000000110000001700000017000000
+        paramName:
+        - array
+        - value
+        - array
+        - value
+        - index
+        - isContained
+        - isContainedEvent
+        - isNotContainedEvent
+        paramDataPos: 0000000000000000010000000100000000000000000000000000000001000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000
+    - name: Player's Turn
+      description: Checks if it's player or boss turn
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 57.03125
+        y: 195.76562
+        width: 162.69
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait For Card Selection
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: a4c8bf00
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: PlayerTurn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - 
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 11000000170000001700000001000000
+        paramName:
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos: 00000000000000000100000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Random Card Selction
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
+        x: 524.9922
+        y: 298.9297
+        width: 160.42
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check Discard Pile
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Check Missing Card Position
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 793.1172
+        y: 187.85938
+        width: 206.07
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Place Card On Empty Position
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Place Card On Empty Position
+      description: 
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 430.26562
+        y: 118.60156
+        width: 204.19
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -8040,9 +8884,79 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
+    - name: Wait For Card Selection
+      description: 
+      colorIndex: 2
+      position:
+        serializedVersion: 2
+        x: 283.65625
+        y: 251.16406
+        width: 176.25
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: DiscardedCard
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Random Card Selction
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
+      isGlobal: 0
+    - name: Discarded
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: CardSelected
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: DiscardedCard
+      isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
     variables:
@@ -8056,14 +8970,54 @@ MonoBehaviour:
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables: []
-      objectVariables: []
+      objectVariables:
+      - useVariable: 1
+        name: Current Card
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: CardData
+        value: {fileID: 0}
       materialVariables: []
       textureVariables: []
-      arrayVariables: []
+      arrayVariables:
+      - useVariable: 1
+        name: Discard Pile
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 12
+        objectTypeName: CardData
+        floatValues: []
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
+        name: Card Positions
+        tooltip: The X positions of each card placement
+        showInInspector: 0
+        networkSync: 0
+        type: 0
+        objectTypeName: UnityEngine.Object
+        floatValues:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        intValues: 
+        boolValues: 
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -8111,6 +9065,19 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!114 &1107330190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107330187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a2e5a0073a4117afc017c66e213cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GUID: 373dca7b-d4a5-46c0-8140-463b384674d8
 --- !u!1 &1161667432
 GameObject:
   m_ObjectHideFlags: 0
@@ -8839,11 +9806,11 @@ Transform:
   m_GameObject: {fileID: 1351879706}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.28412947, y: 1.0985786, z: -0.03020566}
+  m_LocalPosition: {x: 0.16301858, y: 0.18512404, z: -0.047908418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2145157337}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1351879709
 MonoBehaviour:
@@ -9004,8 +9971,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 301.03125
-        y: 208.25
+        x: 670.4219
+        y: 199.11719
         width: 195.57
         height: 32
       isBreakpoint: 0
@@ -9065,8 +10032,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 302.0625
-        y: 100
+        x: 671.4531
+        y: 90.86719
         width: 100
         height: 16
       isBreakpoint: 0
@@ -9126,6 +10093,12 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 100
+      - useVariable: 1
+        name: testid
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -9134,14 +10107,21 @@ MonoBehaviour:
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables: []
-      objectVariables: []
+      objectVariables:
+      - useVariable: 1
+        name: Main Deck
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: BossDeck
+        value: {fileID: 11400000, guid: 8d4178a37b9d4a447a9e948dc943ad18, type: 2}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -9189,6 +10169,82 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
+--- !u!1 &1454887600
+GameObject:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454887601}
+  m_Layer: 0
+  m_Name: //Cards
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 2800000, guid: 4724f3b6006a28f4ca8f7de7bf926d39, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1454887601
+Transform:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454887600}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1516525424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516525425}
+  - component: {fileID: 1516525426}
+  m_Layer: 0
+  m_Name: To-Do
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1516525425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516525424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14342582, y: 1.0523297, z: 10.752154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516525426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516525424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a2e5a0073a4117afc017c66e213cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GUID: d941b497-200c-4ee5-851a-ec2a271e6e74
 --- !u!1 &1811975414
 GameObject:
   m_ObjectHideFlags: 0
@@ -9215,11 +10271,11 @@ Transform:
   m_GameObject: {fileID: 1811975414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12111089, y: 0.91345453, z: 0.017702758}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2145157337}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1811975417
 MonoBehaviour:
@@ -9494,13 +10550,15 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.BoolTest
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: a4c8bf00
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 27fbe103a4c8bf00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -9524,6 +10582,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: PlayerTurn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -9532,19 +10602,22 @@ MonoBehaviour:
         stringParams:
         - PlayerStart
         - BossStart
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 11000000170000001700000001000000
+        paramDataType: 11000000110000000100000011000000170000001700000001000000
         paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
         - boolVariable
         - isTrue
         - isFalse
         - everyFrame
-        paramDataPos: 00000000000000000100000000000000
-        paramByteDataSize: 00000000000000000000000001000000
+        paramDataPos: 00000000010000000000000002000000000000000100000001000000
+        paramByteDataSize: 00000000000000000100000000000000000000000000000001000000
     - name: Go To Win Screen
       description: Victory screen and go to map scene
       colorIndex: 0
@@ -10424,20 +11497,13 @@ MonoBehaviour:
       materialVariables: []
       textureVariables: []
       arrayVariables: []
-      enumVariables:
-      - useVariable: 1
-        name: Player Effect
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        enumName: CardData+CardEffect
-        intValue: 0
+      enumVariables: []
       categories:
       - 
       - Boss
       - Cutscene
       - Player
-      variableCategoryIDs: 010000000100000001000000030000000300000003000000020000000200000000000000
+      variableCategoryIDs: 0100000001000000010000000300000003000000030000000200000002000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -10485,50 +11551,53 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!1 &2145157336
+--- !u!1 &1943609079
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 8
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2145157337}
+  - component: {fileID: 1943609080}
   m_Layer: 0
-  m_Name: WIPGamePieces
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Name: //Misc
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 2800000, guid: 4724f3b6006a28f4ca8f7de7bf926d39, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2145157337
+  m_IsActive: 0
+--- !u!4 &1943609080
 Transform:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145157336}
+  m_GameObject: {fileID: 1943609079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12111089, y: -0.91345453, z: -0.017702758}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1811975415}
-  - {fileID: 174360199}
-  - {fileID: 1351879707}
-  - {fileID: 1099403408}
-  - {fileID: 1107330188}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1943609080}
+  - {fileID: 1516525425}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 354853427}
-  - {fileID: 2145157337}
-  - {fileID: 562665586}
   - {fileID: 523020605}
   - {fileID: 1098157219}
+  - {fileID: 414873876}
+  - {fileID: 1811975415}
+  - {fileID: 174360199}
+  - {fileID: 1351879707}
+  - {fileID: 1099403408}
+  - {fileID: 1454887601}
+  - {fileID: 1107330188}
+  - {fileID: 562665586}
