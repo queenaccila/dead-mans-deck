@@ -106,6 +106,20 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: 373dca7b-d4a5-46c0-8140-463b384674d8
+  - note:
+      noteTitle: X Positions
+      content: '- Playmaker (card anim) --> card x position
+
+        - Returned feedback
+
+        -
+        Spawn feedback --> Position spawn'
+      style: 0
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: da99d45a-9e64-430e-9baa-d8a3a75d4c6d
   noteFolders:
   - Current Tasks
   - Archived
