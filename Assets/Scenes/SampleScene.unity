@@ -3704,7 +3704,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: -7.5
+          value: -7
         - useVariable: 0
           name: 
           tooltip: 
@@ -4951,9 +4951,6 @@ MonoBehaviour:
     - name: ClickStateStart
       isSystemEvent: 0
       isGlobal: 0
-    - name: InitialSpawn
-      isSystemEvent: 0
-      isGlobal: 0
     globalTransitions: []
     variables:
       floatVariables:
@@ -5495,15 +5492,15 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams:
         - TargetObject:
-            useVariable: 0
-            name: 
+            useVariable: 1
+            name: Card
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            typeName: UnityEngine.Object
+            typeName: CardData
             value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
           TargetTypeName: CardData
-          PropertyName: type
+          PropertyName: effect
           BoolParameter:
             useVariable: 0
             name: 
@@ -5578,7 +5575,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            typeName: CardData+CardType
+            typeName: CardData+CardEffect
             value: {fileID: 0}
           MaterialParameter:
             useVariable: 0
@@ -5605,11 +5602,11 @@ MonoBehaviour:
             value: {r: 0, g: 0, b: 0, a: 1}
           EnumParameter:
             useVariable: 1
-            name: Card Type
+            name: Card Effect
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            enumName: CardData+CardType
+            enumName: CardData+CardEffect
             intValue: 0
           ArrayParameter:
             useVariable: 0
@@ -6879,8 +6876,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 819.7969
-        y: 131.82031
+        x: 644.65625
+        y: 88.71094
         width: 128.98
         height: 32
       isBreakpoint: 0
@@ -6891,7 +6888,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: New Card
+        toState: Player Turn
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -7343,14 +7340,14 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 000000000000000001000000010000000200000002000000
         paramByteDataSize: 000000000100000000000000010000000000000001000000
-    - name: New Card
-      description: 
+    - name: Get New Card
+      description: Recieve new card data from deck
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 654.1172
-        y: 104.71094
-        width: 100
+        x: 821.96094
+        y: 107.67969
+        width: 168.075
         height: 16
       isBreakpoint: 0
       isSequence: 0
