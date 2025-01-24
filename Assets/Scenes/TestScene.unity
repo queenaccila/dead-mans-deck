@@ -727,9 +727,9 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 312.35938
-        y: 185.125
-        width: 208.275
+        x: 280.35938
+        y: 281.125
+        width: 199.265
         height: 48
       isBreakpoint: 0
       isSequence: 0
@@ -876,7 +876,7 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams:
         - useVariable: 1
-          name: Card Data
+          name: Main Cards
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -1108,8 +1108,8 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 342.85938
-        y: 112.78125
+        x: 319.64062
+        y: 113.171875
         width: 127.64
         height: 32
       isBreakpoint: 0
@@ -1186,8 +1186,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 693.3125
-        y: 159.09375
+        x: 544.28125
+        y: 286.67188
         width: 100
         height: 32
       isBreakpoint: 0
@@ -1261,13 +1261,13 @@ MonoBehaviour:
         paramByteDataSize: 000000000000000001000000
     - name: Check If Card Is Missing
       description: 
-      colorIndex: 0
+      colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1096.2891
-        y: 162.95312
+        x: 897.0156
+        y: 274.53125
         width: 180.19
-        height: 32
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -1276,18 +1276,29 @@ MonoBehaviour:
           name: Missing Card
           isSystemEvent: 0
           isGlobal: 0
-        toState: Move Card To Missing
+        toState: Go Through Missing Card Array
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Placed Missing
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Place Missing Card
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 78c53001
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1310,24 +1321,26 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - Add other bools for the other cards
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 03000000
+        paramName:
+        - comment
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     - name: Next Card Position
       description: 
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 50.578125
-        y: 191.83594
-        width: 145.16
+        x: 61.664062
+        y: 287.8672
+        width: 139.53
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1486,9 +1499,9 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 870.6719
-        y: 159.33594
-        width: 131.69
+        x: 697.5469
+        y: 282.5625
+        width: 127.85
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -1556,60 +1569,39 @@ MonoBehaviour:
         - everyFrame
         paramDataPos: 00000000000000000100000000000000
         paramByteDataSize: 00000000000000000000000001000000
-    - name: Move Card To Missing
+    - name: Go Through Missing Card Array
       description: 
-      colorIndex: 0
+      colorIndex: 6
       position:
         serializedVersion: 2
-        x: 1120.625
-        y: 75.91406
-        width: 160.85
-        height: 16
+        x: 1163.4219
+        y: 272.4922
+        width: 222.87
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Check If Card Is Missing
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.ArrayGet
-        - HutongGames.PlayMaker.Actions.TweenPosition
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 6ba59301c1a70500
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        fsmOwnerDefaultParams:
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: Current Card
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        animationCurveParams:
-        - curve:
-            serializedVersion: 2
-            m_Curve: []
-            m_PreInfinity: 2
-            m_PostInfinity: 2
-            m_RotationOrder: 4
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams: []
@@ -1617,137 +1609,79 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams: []
         fsmObjectParams: []
-        fsmVarParams:
-        - variableName: Current Position
-          objectType: UnityEngine.Object
-          useVariable: 1
-          type: 6
-          floatValue: 0
-          intValue: 0
-          boolValue: 0
-          stringValue: 
-          vector4Value: {x: 0, y: 0, z: 0, w: 0}
-          objectReference: {fileID: 0}
-          arrayValue:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            type: -1
-            objectTypeName: 
-            floatValues: []
-            intValues: 
-            boolValues: 
-            stringValues: []
-            vector4Values: []
-            objectReferences: []
-        fsmArrayParams:
-        - useVariable: 1
-          name: Card Positions
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          type: 6
-          objectTypeName: UnityEngine.Object
-          floatValues: []
-          intValues: 
-          boolValues: 
-          stringValues: []
-          vector4Values:
-          - {x: 9.5, y: -4, z: 8, w: 0}
-          - {x: 5, y: -4, z: 8, w: 0}
-          - {x: 0.39, y: -4, z: 8, w: 0}
-          - {x: -4.26, y: -4, z: 8, w: 0}
-          - {x: -8.92, y: -4, z: 8, w: 0}
-          - {x: -13.5, y: -4, z: 8, w: 0}
-          objectReferences: []
-        fsmEnumParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          enumName: HutongGames.EasingFunction+Ease
-          intValue: 15
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0.25
-        fsmIntParams:
-        - useVariable: 1
-          name: Card Index
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        fsmBoolParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
         fsmVector2Params: []
-        fsmVector3Params:
-        - useVariable: 1
-          name: Start Card Position
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 14.5, y: -4, z: 0}
-        - useVariable: 1
-          name: Current Position
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
+        fsmVector3Params: []
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams:
-        - 
-        - 
-        byteData: 00010000000100000000000000000000000000000000
+        stringParams: []
+        byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 290000001000000027000000010000001700000007000000130000001c00000007000000130000001c000000140000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000
-        paramName:
-        - array
-        - index
-        - storeValue
-        - everyFrame
-        - indexOutOfRange
-        - fromOption
-        - fromTarget
-        - fromPosition
-        - toOption
-        - toTarget
-        - toPosition
-        - gameObject
-        - startDelay
-        - easeType
-        - customCurve
-        - time
-        - realTime
-        - loopType
-        - finishEvent
-        - normalizedTime
-        - everyFrame
-        - updateType
-        paramDataPos: 000000000000000000000000000000000000000001000000000000000000000005000000010000000100000000000000000000000000000000000000010000000000000009000000010000000d0000001100000012000000
-        paramByteDataSize: 00000000000000000000000001000000000000000400000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Place Missing Card
+      description: 
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 670.75
+        y: 109.96875
+        width: 142.36
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: Cards Set
       isSystemEvent: 0
@@ -1759,6 +1693,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: Missing Card
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Placed Missing
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions: []
@@ -1808,6 +1745,19 @@ MonoBehaviour:
       textureVariables: []
       arrayVariables:
       - useVariable: 1
+        name: Card Checker
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        type: 2
+        objectTypeName: UnityEngine.Object
+        floatValues: []
+        intValues: 
+        boolValues: 010101010101
+        stringValues: []
+        vector4Values: []
+        objectReferences: []
+      - useVariable: 1
         name: Card Positions
         tooltip: 
         showInInspector: 0
@@ -1827,7 +1777,7 @@ MonoBehaviour:
         - {x: -13.5, y: -4, z: 8, w: 0}
         objectReferences: []
       - useVariable: 1
-        name: Card Data
+        name: Main Cards
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1845,22 +1795,10 @@ MonoBehaviour:
         - {fileID: 653997429}
         - {fileID: 491645155}
         - {fileID: 314772138}
-      - useVariable: 1
-        name: Card Checker
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        type: 2
-        objectTypeName: UnityEngine.Object
-        floatValues: []
-        intValues: 
-        boolValues: 010101010101
-        stringValues: []
-        vector4Values: []
-        objectReferences: []
       enumVariables: []
       categories:
       - 
+      - Card Bools
       variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
@@ -3187,15 +3125,15 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: After Placement
+    startState: Reset with New Data
     states:
     - name: After Placement
       description: Starts after cards are placed
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 66
-        y: 100
+        x: 166
+        y: 132
         width: 161.41501
         height: 32
       isBreakpoint: 0
@@ -3303,7 +3241,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 60.671875
-        y: 206.32812
+        y: 270.32812
         width: 138.25
         height: 32
       isBreakpoint: 0
@@ -3378,7 +3316,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 482.78906
-        y: 198.64844
+        y: 262.64844
         width: 116.47
         height: 48
       isBreakpoint: 0
@@ -3614,7 +3552,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 275.39062
-        y: 202.98438
+        y: 266.98438
         width: 132.29001
         height: 32
       isBreakpoint: 0
@@ -3675,7 +3613,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 668
-        y: 194
+        y: 258
         width: 125.31
         height: 32
       isBreakpoint: 0
@@ -3819,7 +3757,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 276.375
-        y: 270.5078
+        y: 334.5078
         width: 151.51999
         height: 32
       isBreakpoint: 0
@@ -4046,7 +3984,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1055.7578
-        y: 201.76562
+        y: 265.76562
         width: 110.97
         height: 32
       isBreakpoint: 0
@@ -4152,8 +4090,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 849.3828
-        y: 107.953125
+        x: 769.3906
+        y: 139.95312
         width: 141.35
         height: 16
       isBreakpoint: 0
@@ -4163,12 +4101,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.TweenPosition
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: c1a70500
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000011000000
+        actionHashCodes: c1a7050027fbe103
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
@@ -4237,6 +4177,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: Used
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 0
@@ -4256,12 +4208,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 000000000100000000000000000000000000000000
+        byteData: 00000000010000000000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 07000000130000001c00000007000000130000001c000000140000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000
+        paramDataType: 07000000130000001c00000007000000130000001c000000140000000f0000002a000000160000000f000000110000000700000017000000020000000100000007000000110000001100000001000000
         paramName:
         - fromOption
         - fromTarget
@@ -4280,15 +4232,18 @@ MonoBehaviour:
         - normalizedTime
         - everyFrame
         - updateType
-        paramDataPos: 00000000000000000000000004000000010000000100000000000000000000000000000000000000010000000000000008000000000000000c0000001000000011000000
-        paramByteDataSize: 0400000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 00000000000000000000000004000000010000000100000000000000000000000000000000000000010000000000000008000000000000000c0000001000000011000000010000000200000015000000
+        paramByteDataSize: 0400000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000400000000000000040000000100000004000000000000000000000001000000
     - name: Reset with New Data
       description: Info taken from CardDeck
       colorIndex: 3
       position:
         serializedVersion: 2
-        x: 471.90625
-        y: 98.015625
+        x: 461.90625
+        y: 101.015625
         width: 165.905
         height: 16
       isBreakpoint: 0
@@ -4340,7 +4295,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1199.6953
-        y: 118.453125
+        y: 182.45312
         width: 232.785
         height: 48
       isBreakpoint: 0
@@ -4451,7 +4406,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 855.7344
-        y: 195.875
+        y: 259.875
         width: 100
         height: 32
       isBreakpoint: 0
@@ -4496,7 +4451,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.25
+          value: 0.1
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -4518,6 +4473,58 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: State 1
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1051.3125
+        y: 375.84375
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: Card Placed
       isSystemEvent: 0
@@ -4585,14 +4592,21 @@ MonoBehaviour:
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables: []
-      objectVariables: []
+      objectVariables:
+      - useVariable: 1
+        name: Current Card Data
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: CardData
+        value: {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
       materialVariables: []
       textureVariables: []
       arrayVariables: []
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000000000000000000000000000
+      variableCategoryIDs: 0000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
