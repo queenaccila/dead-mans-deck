@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7e2a6c9d4e75054294ebe3f963f4be4, type: 3}
-  m_Name: TestCard2
+  m_Name: Attack_1
   m_EditorClassIdentifier: 
-  cardID: 0
-  cardName: Test2
+  cardID: 1
+  cardName: Gunpowder Blast
   type: 0
   effect: 0
   rarity: 0
-  value: 0
-  sprite: {fileID: -7151816603604283717, guid: ebaaaf38078e37a44978fc5bb9463cb2, type: 3}
+  value: 6
+  sprite: {fileID: -7133230849722980620, guid: af40591c8dc96374da80a66c335ee312, type: 3}

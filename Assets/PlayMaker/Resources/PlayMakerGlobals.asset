@@ -71,6 +71,10 @@ MonoBehaviour:
       vector4Values: []
       objectReferences:
       - {fileID: 11400000, guid: 6fe31f9976297304e977cd963f6fbb46, type: 2}
+      - {fileID: 11400000, guid: 67da70fa53392374bbb7098c2a9ddbfb, type: 2}
+      - {fileID: 11400000, guid: 5f066ae9f66aa494b81901afb39df052, type: 2}
+      - {fileID: 11400000, guid: 81525bd2400363c4bba35b944cefad42, type: 2}
+      - {fileID: 11400000, guid: 18d06db1beb123d4cb87db80fd229d06, type: 2}
     - useVariable: 1
       name: Bosses Defeated
       tooltip: 
@@ -84,10 +88,17 @@ MonoBehaviour:
       stringValues: []
       vector4Values: []
       objectReferences: []
-    enumVariables: []
+    enumVariables:
+    - useVariable: 1
+      name: Current Mode
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      enumName: GameMode+Mode
+      intValue: 0
     categories:
     - 
     - Player
-    variableCategoryIDs: 0100000001000000010000000100000001000000010000000000000002000000020000000000000002000000000000000000000000000000
+    variableCategoryIDs: 010000000100000001000000010000000100000001000000000000000000000002000000020000000000000002000000000000000000000000000000
   events:
   - PlayerStart

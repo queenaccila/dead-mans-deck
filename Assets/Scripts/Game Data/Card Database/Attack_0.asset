@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7e2a6c9d4e75054294ebe3f963f4be4, type: 3}
-  m_Name: TestCard
+  m_Name: Attack_0
   m_EditorClassIdentifier: 
   cardID: 0
-  cardName: Test
-  type: 2
+  cardName: Cutlass Slash
+  type: 0
   effect: 0
   rarity: 0
-  value: 10
+  value: 5
   sprite: {fileID: 2519233111475243274, guid: 13ecc79e15985ce489610247b0c6f825, type: 3}

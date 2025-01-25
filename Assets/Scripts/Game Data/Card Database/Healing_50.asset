@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1572125070, guid: 336aa50a81ce85b47b50a7b6adf85a76, type: 3}
-  m_Name: GameVariables
+  m_Script: {fileID: 11500000, guid: f7e2a6c9d4e75054294ebe3f963f4be4, type: 3}
+  m_Name: Healing_50
   m_EditorClassIdentifier: 
-  VariableTypesDefinition:
-  - Name: Card
-    Type: CardData
-  - Name: Boss Deck
-    Type: BossDeck
-  - Name: Game Mode
-    Type: GameMode
+  cardID: 50
+  cardName: Soothing Elixir
+  type: 2
+  effect: 0
+  rarity: 0
+  value: 7
+  sprite: {fileID: -3251233695883967156, guid: bf97abf7bca1353478b3c6f8166740fc, type: 3}
