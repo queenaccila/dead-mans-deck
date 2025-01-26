@@ -130,6 +130,41 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: a781b2b2-ed15-4596-b6cd-bfa4f7c7ea5d
+  - note:
+      noteTitle: Apply Effects
+      content: '- Stun'
+      style: 0
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: b2954fdc-6900-4875-87c0-a3e30344ca8a
+  - note:
+      noteTitle: Apply Effects
+      content: '- Burn (before cards)
+
+        - Poison (before cards)
+
+
+        After
+        card selection:
+
+        - Bleed
+
+        - Regeneration
+
+        - Weaken
+
+        -
+        Block
+
+        - Vengeance'
+      style: 1
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: 0d30e941-9195-4d3d-82b4-67a41e8aa3cf
   noteFolders:
   - Current Tasks
   - Archived
