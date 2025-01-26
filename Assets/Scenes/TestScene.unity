@@ -8858,14 +8858,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetFsmBool
         - HutongGames.PlayMaker.Actions.BoolTest
         - HutongGames.PlayMaker.Actions.CallMethod
+        - HutongGames.PlayMaker.Actions.CallMethod
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000500000009000000
-        actionHashCodes: 68fece05a4c8bf00ca51e900
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000900000013000000
+        actionHashCodes: 68fece05a4c8bf00ca51e900ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -8902,6 +8904,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: UpdateBar
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: UpdateBar
         fsmObjectParams:
         - useVariable: 0
           name: 
@@ -8910,6 +8918,13 @@ MonoBehaviour:
           networkSync: 0
           typeName: MoreMountains.Tools.MMHealthBar
           value: {fileID: 1894917137}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: MoreMountains.Tools.MMHealthBar
+          value: {fileID: 385485713}
         fsmVarParams:
         - variableName: Health
           objectType: UnityEngine.Object
@@ -9031,6 +9046,126 @@ MonoBehaviour:
             stringValues: []
             vector4Values: []
             objectReferences: []
+        - variableName: Current Bleed
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 0
+          type: 0
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: Max Bleed
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 50
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 0
+          type: 2
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
@@ -9056,13 +9191,14 @@ MonoBehaviour:
         stringParams:
         - Game Has Started
         - 
-        byteData: 01010000
-        arrayParamSizes: 04000000
+        byteData: 010100000000
+        arrayParamSizes: 0400000004000000
         arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000120000001200000011000000010000001100000017000000170000000100000018000000120000000c00000027000000270000002700000027000000270000000100000001000000
+        paramDataType: 14000000120000001200000011000000010000001100000017000000170000000100000018000000120000000c0000002700000027000000270000002700000027000000010000000100000018000000120000000c00000027000000270000002700000027000000270000000100000001000000
         paramName:
         - gameObject
         - fsmName
@@ -9083,8 +9219,18 @@ MonoBehaviour:
         - storeResult
         - everyFrame
         - manualUI
-        paramDataPos: 00000000000000000100000000000000000000000100000000000000010000000100000000000000020000000000000000000000010000000200000003000000040000000200000003000000
-        paramByteDataSize: 00000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000
+        - behaviour
+        - methodName
+        - parameters
+        - 
+        - 
+        - 
+        - 
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 0000000000000000010000000000000000000000010000000000000001000000010000000000000002000000000000000000000001000000020000000300000004000000020000000300000001000000030000000100000005000000060000000700000008000000090000000400000005000000
+        paramByteDataSize: 0000000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000
     - name: If Player's Turn
       description: 
       colorIndex: 2
@@ -10402,13 +10548,13 @@ MonoBehaviour:
         paramDataPos: 
         paramByteDataSize: 
     - name: Add to Bleed Meter
-      description: 
+      description: Applies to boss bleed meter
       colorIndex: 7
       position:
         serializedVersion: 2
         x: 1777.0469
         y: 113.703125
-        width: 147.84
+        width: 168.305
         height: 32
       isBreakpoint: 0
       isSequence: 0
@@ -10424,12 +10570,14 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 78c53001
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -10452,16 +10600,18 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
+        stringParams:
+        - Test with player bleed meter for now
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 03000000
+        paramName:
+        - comment
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     - name: Wait For Card Selection
       description: 
       colorIndex: 2
@@ -11152,6 +11302,18 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 10
+      - useVariable: 1
+        name: Max Bleed
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 50
+      - useVariable: 1
+        name: Current Bleed
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables:
       - useVariable: 1
         name: Burn Turns
@@ -11218,10 +11380,11 @@ MonoBehaviour:
         intValue: 0
       categories:
       - 
+      - Bleed
       - Card
       - Effects
       - Player Stats
-      variableCategoryIDs: 020000000300000003000000020000000200000002000000020000000200000000000000000000000100000001000000
+      variableCategoryIDs: 0300000004000000040000000300000001000000010000000300000003000000030000000300000000000000000000000200000002000000
     description: 
     docUrl: 
     showStateLabel: 0

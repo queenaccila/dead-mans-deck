@@ -176,18 +176,18 @@ MonoBehaviour:
     GUID: 01d6be76-ddba-4d6d-8e75-b5bffa7107cd
   - note:
       noteTitle: Effects Done
-      content: '- Burn - Done (for player)
+      content: '- Burn - DONE
 
-        - Poison - Done (for player)
+        - Poison - DONE
+
+        - Stun
 
         -
-        Stun
-
-        - Bleed
+        Bleed - IN PROGRESS
 
         - Freeze
 
-        - Regeneration
+        - Regeneration - DONE
 
         -
         Weaken
