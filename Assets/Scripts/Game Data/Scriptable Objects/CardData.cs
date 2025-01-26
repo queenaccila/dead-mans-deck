@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "CardData", menuName = "Scriptable Objects/CardData")]
 public class CardData : ScriptableObject
@@ -38,6 +39,7 @@ public class CardData : ScriptableObject
     // public variables to declare for a card
     public int cardID;
     public string cardName;
+    public string cardDescription;
     public CardType type;
     public CardEffect effect;
     public CardRarity rarity;

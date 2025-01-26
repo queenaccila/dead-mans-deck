@@ -203,6 +203,19 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: a4e78169-c79d-4e9d-a672-fd1995ff4268
+  - note:
+      noteTitle: Card Type
+      content: '- Attack
+
+        - Defense
+
+        - Healing'
+      style: 2
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: f886ea25-8df7-4ddc-b65d-b9fe22f06884
   noteFolders:
   - Current Tasks
   - Archived

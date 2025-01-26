@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 1
   cardName: Gunpowder Blast
+  cardDescription: Deal 6 damage
   type: 0
   effect: 0
   rarity: 0

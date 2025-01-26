@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 50
   cardName: Soothing Elixir
+  cardDescription: Heals 7 HP immediately
   type: 2
   effect: 0
   rarity: 0

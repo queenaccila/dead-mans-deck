@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 0
   cardName: Cutlass Slash
+  cardDescription: Deal 5 damage
   type: 0
   effect: 0
   rarity: 0
