@@ -122,9 +122,8 @@ MonoBehaviour:
     GUID: da99d45a-9e64-430e-9baa-d8a3a75d4c6d
   - note:
       noteTitle: Things to note
-      content: 'Coordinates: 9.5, -4, 8
-
-        - Change them in return + hover'
+      content: "Coordinates: 9.5, -4, 8\n- Change them in PlayMaker:\n  - Variable
+        \"Position\""
       style: 0
       isOpen: 1
       folderIndex: 0
