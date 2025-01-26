@@ -165,6 +165,44 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: 0d30e941-9195-4d3d-82b4-67a41e8aa3cf
+  - note:
+      noteTitle: Note Title (Edit Me!)
+      content: Put Your Note Here
+      style: 0
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: 01d6be76-ddba-4d6d-8e75-b5bffa7107cd
+  - note:
+      noteTitle: Effects Done
+      content: '- Burn - Done (for player)
+
+        - Poison - Done (for player)
+
+        -
+        Stun
+
+        - Bleed
+
+        - Freeze
+
+        - Regeneration
+
+        -
+        Weaken
+
+        - Block
+
+        - Steal
+
+        - Vengeance'
+      style: 3
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: a4e78169-c79d-4e9d-a672-fd1995ff4268
   noteFolders:
   - Current Tasks
   - Archived
