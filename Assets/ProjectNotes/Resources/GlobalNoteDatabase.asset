@@ -216,6 +216,15 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: f886ea25-8df7-4ddc-b65d-b9fe22f06884
+  - note:
+      noteTitle: To-Do Later
+      content: '- Add filler sprites to do flash effects on'
+      style: 1
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: 6d5467d1-413f-4aea-bedd-11832de9fd6f
   noteFolders:
   - Current Tasks
   - Archived
