@@ -3621,7 +3621,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0
+          value: 1
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -8976,8 +8976,8 @@ MonoBehaviour:
       colorIndex: 2
       position:
         serializedVersion: 2
-        x: 1025.6484
-        y: 209.79688
+        x: 1015.03906
+        y: 209.78125
         width: 176.25
         height: 32
       isBreakpoint: 0
