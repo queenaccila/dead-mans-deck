@@ -11266,7 +11266,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 58.515625
-        y: 1035.2578
+        y: 1163.2578
         width: 145.83
         height: 32
       isBreakpoint: 0
@@ -11829,7 +11829,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 260.14062
-        y: 1035.9922
+        y: 1163.9922
         width: 117.77
         height: 32
       isBreakpoint: 0
@@ -11904,7 +11904,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1340.0703
-        y: 1048.1719
+        y: 1176.1719
         width: 155.48999
         height: 48
       isBreakpoint: 0
@@ -11997,7 +11997,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 973
-        y: 1043
+        y: 1171
         width: 143.28
         height: 48
       isBreakpoint: 0
@@ -12090,7 +12090,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 970.8203
-        y: 1123.9219
+        y: 1251.9219
         width: 140.01001
         height: 32
       isBreakpoint: 0
@@ -12425,7 +12425,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1335.9609
-        y: 1125.0469
+        y: 1253.0469
         width: 152.22
         height: 32
       isBreakpoint: 0
@@ -12714,9 +12714,9 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1235.7969
-        y: 331.78125
-        width: 157.07
-        height: 48
+        y: 459.78125
+        width: 162.86
+        height: 80
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -12725,7 +12725,25 @@ MonoBehaviour:
           name: No Effect
           isSystemEvent: 0
           isGlobal: 0
-        toState: Wait for Boss
+        toState: Finish Effects
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Burn
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Add Burn Turns
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Poison
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Add Poison Turns
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -13125,7 +13143,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1648.2344
-        y: 1125.4297
+        y: 1253.4297
         width: 100
         height: 16
       isBreakpoint: 0
@@ -13177,7 +13195,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 719.1719
-        y: 842.27344
+        y: 970.27344
         width: 168.16
         height: 32
       isBreakpoint: 0
@@ -13238,7 +13256,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 977.83594
-        y: 835.1875
+        y: 963.1875
         width: 108.57
         height: 32
       isBreakpoint: 0
@@ -13295,11 +13313,11 @@ MonoBehaviour:
         paramByteDataSize: 
     - name: Check Bleed Meter
       description: Check current card IDs
-      colorIndex: 6
+      colorIndex: 7
       position:
         serializedVersion: 2
         x: 1490.6953
-        y: 117.75781
+        y: 245.75781
         width: 158.75
         height: 48
       isBreakpoint: 0
@@ -13310,7 +13328,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Finish Bleed Effect
+        toState: Finish Bleed Effects
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -13680,7 +13698,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1608.8828
-        y: 1044.1953
+        y: 1172.1953
         width: 168.75
         height: 32
       isBreakpoint: 0
@@ -14097,11 +14115,11 @@ MonoBehaviour:
         paramByteDataSize: 0000000000000000000000000000000000000000010000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000100000000000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000001000000000000000100000000000000000000000000000001000000
     - name: Bleeding Health
       description: Check if bleed meter is full
-      colorIndex: 6
+      colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1706.1641
-        y: 122.390625
+        x: 1697.6094
+        y: 250.375
         width: 154.33
         height: 32
       isBreakpoint: 0
@@ -14215,7 +14233,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 600.84375
-        y: 1037.1641
+        y: 1165.1641
         width: 152.8
         height: 48
       isBreakpoint: 0
@@ -14308,7 +14326,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 577.9297
-        y: 1123.125
+        y: 1251.125
         width: 149.53
         height: 32
       isBreakpoint: 0
@@ -14643,7 +14661,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 766.85156
-        y: 1122.4219
+        y: 1250.4219
         width: 100
         height: 32
       isBreakpoint: 0
@@ -14716,7 +14734,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 437.0547
-        y: 1036.0312
+        y: 1164.0312
         width: 100
         height: 32
       isBreakpoint: 0
@@ -14789,7 +14807,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1154.2734
-        y: 1128.7344
+        y: 1256.7344
         width: 105.92
         height: 32
       isBreakpoint: 0
@@ -14862,7 +14880,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1486.2734
-        y: 797.8281
+        y: 925.8281
         width: 131.62
         height: 64
       isBreakpoint: 0
@@ -15122,7 +15140,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1241.9141
-        y: 752.52344
+        y: 880.52344
         width: 145.56
         height: 32
       isBreakpoint: 0
@@ -15393,7 +15411,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1261.9219
-        y: 815.7969
+        y: 943.7969
         width: 106.09
         height: 32
       isBreakpoint: 0
@@ -15664,7 +15682,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1252.0234
-        y: 890.1797
+        y: 1018.1797
         width: 135.41
         height: 32
       isBreakpoint: 0
@@ -15981,7 +15999,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 472.2578
-        y: 845.9844
+        y: 973.9844
         width: 144.12
         height: 32
       isBreakpoint: 0
@@ -16042,7 +16060,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1759.75
-        y: 381.4453
+        y: 509.4453
         width: 131.67
         height: 16
       isBreakpoint: 0
@@ -16094,7 +16112,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1759.0859
-        y: 454.4375
+        y: 582.4375
         width: 139.63
         height: 16
       isBreakpoint: 0
@@ -16146,7 +16164,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1760.0234
-        y: 589.40625
+        y: 717.40625
         width: 141.485
         height: 16
       isBreakpoint: 0
@@ -16198,7 +16216,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1954.3047
-        y: 586.89844
+        y: 714.89844
         width: 140.11
         height: 16
       isBreakpoint: 0
@@ -16250,7 +16268,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1955.3984
-        y: 636.35156
+        y: 764.35156
         width: 137.94
         height: 16
       isBreakpoint: 0
@@ -16301,21 +16319,34 @@ MonoBehaviour:
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 965.71094
-        y: 295.22656
+        x: 1509.4219
+        y: 50.546875
         width: 122.14
-        height: 16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Finish Burn or Poison
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CallMethod
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: ca51e900ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -16325,9 +16356,131 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: addBurnTurns
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: addBurnHealth
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: AttackChecker
+          value: {fileID: 792699974}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: AttackChecker
+          value: {fileID: 792699974}
+        fsmVarParams:
+        - variableName: Current Card ID
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: Burn Turns
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
+          floatValue: 0
+          intValue: 1
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: Current Card ID
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: Burn Health
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 10
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
@@ -16339,28 +16492,53 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 00000000
+        arrayParamSizes: 0100000001000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 18000000120000000c0000002700000027000000010000000100000018000000120000000c00000027000000270000000100000001000000
+        paramName:
+        - behaviour
+        - methodName
+        - parameters
+        - 
+        - storeResult
+        - everyFrame
+        - manualUI
+        - behaviour
+        - methodName
+        - parameters
+        - 
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 0000000000000000000000000000000001000000000000000100000001000000010000000100000002000000030000000200000003000000
+        paramByteDataSize: 0000000000000000000000000000000000000000010000000100000000000000000000000000000000000000000000000100000001000000
     - name: Add Poison Turns
       description: 
       colorIndex: 7
       position:
         serializedVersion: 2
-        x: 965.14844
-        y: 373.10156
-        width: 134.36
-        height: 16
+        x: 1499.9219
+        y: 130.60938
+        width: 138.16
+        height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
-      transitions: []
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Finish Burn or Poison
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
@@ -16406,7 +16584,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1236.8125
-        y: 259.6172
+        y: 387.6172
         width: 148.41
         height: 32
       isBreakpoint: 0
@@ -16467,7 +16645,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1471.3672
-        y: 709.10156
+        y: 837.10156
         width: 129.69
         height: 32
       isBreakpoint: 0
@@ -16528,7 +16706,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 1767.5469
-        y: 525.02344
+        y: 653.02344
         width: 105.76
         height: 16
       isBreakpoint: 0
@@ -16574,33 +16752,67 @@ MonoBehaviour:
         paramName: []
         paramDataPos: 
         paramByteDataSize: 
-    - name: Finish Bleed Effect
+    - name: Finish Bleed Effects
       description: 
-      colorIndex: 6
+      colorIndex: 2
       position:
         serializedVersion: 2
-        x: 1494.9453
-        y: 60.234375
-        width: 139.47
+        x: 1704.9453
+        y: 216.375
+        width: 146.20999
         height: 16
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions: []
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams: []
+        fsmEventTargetParams:
+        - target: 0
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
@@ -16608,7 +16820,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -16616,23 +16834,28 @@ MonoBehaviour:
         fsmColorParams: []
         fsmRectParams: []
         fsmQuaternionParams: []
-        stringParams: []
-        byteData: 
+        stringParams:
+        - Finish Effects
+        byteData: 00
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     - name: Play Bar Feedbacks
       description: 
-      colorIndex: 6
+      colorIndex: 7
       position:
         serializedVersion: 2
-        x: 1897
-        y: 54
+        x: 1914.7266
+        y: 250.65625
         width: 144.73999
         height: 32
       isBreakpoint: 0
@@ -16643,7 +16866,7 @@ MonoBehaviour:
           name: BleedMeterFull
           isSystemEvent: 0
           isGlobal: 0
-        toState: Finish Bleed Effect
+        toState: Finish Bleed Effects
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -16879,6 +17102,200 @@ MonoBehaviour:
         - manualUI
         paramDataPos: 00000000000000000000000000000000010000000200000003000000040000000000000001000000010000000100000001000000050000000200000003000000
         paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000001000000
+    - name: Finish Effects
+      description: 
+      colorIndex: 2
+      position:
+        serializedVersion: 2
+        x: 1029.8125
+        y: 477.25
+        width: 110.26
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 0
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Finish Effects
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
+    - name: Finish Burn or Poison
+      description: 
+      colorIndex: 2
+      position:
+        serializedVersion: 2
+        x: 1701.9766
+        y: 91.03906
+        width: 153.6
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SendEvent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5e69bb04
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams:
+        - target: 0
+          excludeSelf:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          gameObject:
+            ownerOption: 0
+            gameObject:
+              useVariable: 0
+              name: 
+              tooltip: 
+              showInInspector: 0
+              networkSync: 0
+              value: {fileID: 0}
+          fsmName:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          sendToChildren:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          fsmComponent: {fileID: 0}
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Finish Effects
+        byteData: 00
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1f000000170000000f00000001000000
+        paramName:
+        - eventTarget
+        - sendEvent
+        - delay
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000
+        paramByteDataSize: 00000000000000000000000001000000
     events:
     - name: Game Has Started
       isSystemEvent: 0
@@ -16950,6 +17367,12 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: BleedMeterFull
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Burn
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Poison
       isSystemEvent: 0
       isGlobal: 0
     globalTransitions:
