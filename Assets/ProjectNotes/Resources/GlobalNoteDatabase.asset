@@ -149,11 +149,9 @@ MonoBehaviour:
         After
         card selection:
 
-        - Bleed
+        - Bleed - IN PROGRESS
 
         - Regeneration
-
-        - Weaken
 
         -
         Block
@@ -190,11 +188,7 @@ MonoBehaviour:
         - Regeneration - DONE
 
         -
-        Weaken
-
-        - Block
-
-        - Steal
+        Block
 
         - Vengeance'
       style: 3
@@ -205,11 +199,11 @@ MonoBehaviour:
     GUID: a4e78169-c79d-4e9d-a672-fd1995ff4268
   - note:
       noteTitle: Card Type
-      content: '- Attack
+      content: '- Attack - DONE
 
-        - Defense
+        - Defense - DONE
 
-        - Healing'
+        - Healing - DONE'
       style: 2
       isOpen: 1
       folderIndex: 0
@@ -225,6 +219,32 @@ MonoBehaviour:
     isGlobal: 0
     instanceID: 0
     GUID: 6d5467d1-413f-4aea-bedd-11832de9fd6f
+  - note:
+      noteTitle: Features
+      content: '- Make it more focused on AI decision making for the cards
+
+        -
+        This is not a copy and paste of the player class'
+      style: 0
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: 084f8b19-f14a-422b-b0b9-d921860ecc81
+  - note:
+      noteTitle: Main Features
+      content: '- Effects - IN PROGRESS
+
+        - Turn-based combat
+
+        - Boss
+        AI'
+      style: 0
+      isOpen: 1
+      folderIndex: 0
+    isGlobal: 0
+    instanceID: 0
+    GUID: 91d53782-2e96-4cf9-9a4f-15bb632a79b5
   noteFolders:
   - Current Tasks
   - Archived
