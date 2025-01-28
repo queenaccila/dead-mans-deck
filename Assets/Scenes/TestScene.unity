@@ -8943,15 +8943,17 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetProperty
         - HutongGames.PlayMaker.Actions.GetProperty
         - HutongGames.PlayMaker.Actions.GetProperty
+        - HutongGames.PlayMaker.Actions.GetProperty
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 00000000050000000700000009000000
-        actionHashCodes: 597887005ac852045ac852045ac85204
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 000000000500000007000000090000000b000000
+        actionHashCodes: 597887005ac852045ac852045ac852045ac85204
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -9339,6 +9341,138 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
+        - TargetObject:
+            useVariable: 1
+            name: Current Card Data
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: CardData
+            value: {fileID: 0}
+          TargetTypeName: CardData
+          PropertyName: value
+          BoolParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 1
+            name: Current Card Value
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: 
+          Vector2Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Int32
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            typeName: 
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
             enumName: 
             intValue: 0
           ArrayParameter:
@@ -9425,12 +9559,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00000000
+        byteData: 0000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 2900000027000000100000001100000001000000240000000100000024000000010000002400000001000000
+        paramDataType: 29000000270000001000000011000000010000002400000001000000240000000100000024000000010000002400000001000000
         paramName:
         - array
         - storeValue
@@ -9443,8 +9577,10 @@ MonoBehaviour:
         - everyFrame
         - targetProperty
         - everyFrame
-        paramDataPos: 0000000000000000000000000000000000000000000000000100000001000000020000000200000003000000
-        paramByteDataSize: 0000000000000000000000000000000001000000000000000100000000000000010000000000000001000000
+        - targetProperty
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000010000000200000002000000030000000300000004000000
+        paramByteDataSize: 00000000000000000000000000000000010000000000000001000000000000000100000000000000010000000000000001000000
     - name: Set Boss Attack
       description: 
       colorIndex: 6
@@ -9452,14 +9588,14 @@ MonoBehaviour:
         serializedVersion: 2
         x: 480.76562
         y: 192.10938
-        width: 128.47
+        width: 133.09
         height: 32
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
-          name: BossHealthLess
+          name: PlayerHealthLess
           isSystemEvent: 0
           isGlobal: 0
         toState: Start Feedbacks
@@ -9469,15 +9605,17 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.FloatSubtract
         - HutongGames.PlayMaker.Actions.CallMethod
         - HutongGames.PlayMaker.Actions.CallMethod
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000a000000
-        actionHashCodes: ca51e900ca51e900
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000040000000e000000
+        actionHashCodes: 2a6e8a00ca51e900ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -9507,14 +9645,14 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           typeName: MoreMountains.Tools.MMHealthBar
-          value: {fileID: 1271204134}
+          value: {fileID: 1894917137}
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
           typeName: MoreMountains.Feedbacks.MMF_Player
-          value: {fileID: 1800679001}
+          value: {fileID: 1946932076}
         fsmVarParams:
         - variableName: Player Health
           objectType: UnityEngine.Object
@@ -9594,7 +9732,7 @@ MonoBehaviour:
           type: 2
           floatValue: 0
           intValue: 0
-          boolValue: 0
+          boolValue: 1
           stringValue: 
           vector4Value: {x: 0, y: 0, z: 0, w: 0}
           objectReference: {fileID: 0}
@@ -9662,7 +9800,19 @@ MonoBehaviour:
             objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: Player Health
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Current Card Value
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams: []
         fsmVector2Params: []
@@ -9671,15 +9821,19 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 00000000
+        byteData: 000000000000
         arrayParamSizes: 0400000000000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmVar
         - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 18000000120000000c0000002700000027000000270000002700000027000000010000000100000018000000120000000c000000270000000100000001000000
+        paramDataType: 0f0000000f000000010000000100000018000000120000000c0000002700000027000000270000002700000027000000010000000100000018000000120000000c000000270000000100000001000000
         paramName:
+        - floatVariable
+        - subtract
+        - everyFrame
+        - perSecond
         - behaviour
         - methodName
         - parameters
@@ -9696,8 +9850,8 @@ MonoBehaviour:
         - storeResult
         - everyFrame
         - manualUI
-        paramDataPos: 00000000000000000000000000000000010000000200000003000000040000000000000001000000010000000100000001000000050000000200000003000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000001000000
+        paramDataPos: 0000000001000000000000000100000000000000000000000000000000000000010000000200000003000000040000000200000003000000010000000100000001000000050000000400000005000000
+        paramByteDataSize: 0000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000001000000
     - name: Add Boss Defense
       description: 
       colorIndex: 6
@@ -10472,6 +10626,9 @@ MonoBehaviour:
     - name: BossHealthLess
       isSystemEvent: 0
       isGlobal: 0
+    - name: PlayerHealthLess
+      isSystemEvent: 0
+      isGlobal: 0
     globalTransitions:
     - fsmEvent:
         name: Card Selected
@@ -10553,13 +10710,13 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      intVariables:
       - useVariable: 1
-        name: Stun Turns
+        name: Current Card Value
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
+      intVariables:
       - useVariable: 1
         name: Current Attack
         tooltip: 
@@ -10573,7 +10730,7 @@ MonoBehaviour:
         networkSync: 0
         value: 0
       - useVariable: 1
-        name: Current Card Attack
+        name: Stun Turns
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -10651,7 +10808,7 @@ MonoBehaviour:
       - Health
       - Player
       - Stun
-      variableCategoryIDs: 0400000005000000040000000500000002000000020000000600000006000000060000000000000007000000010000000300000003000000000000000000000003000000030000000000000003000000
+      variableCategoryIDs: 0400000005000000040000000500000002000000020000000600000006000000060000000000000003000000010000000300000007000000000000000000000003000000030000000000000003000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -25061,7 +25218,19 @@ MonoBehaviour:
         m_Calls: []
     OnComplete:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 973456987}
+          m_TargetAssemblyTypeName: PlayMakerFSM, PlayMaker
+          m_MethodName: SendEvent
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PlayerHealthLess
+            m_BoolArgument: 0
+          m_CallState: 2
     OnRestoreInitialValues:
       m_PersistentCalls:
         m_Calls: []
