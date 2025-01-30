@@ -104,3 +104,4 @@ MonoBehaviour:
   - PlayerStart
   - Randomized
   - Start Boss Turn
+  - Health Change
