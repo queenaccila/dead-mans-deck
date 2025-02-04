@@ -30,4 +30,11 @@ public class Calculations : MonoBehaviour
 
         return finalAtkCalculation; // this needs to be subtracted from affected hp
     }
+
+    public CardData ClearCardData(CardData card)
+    {
+        card = null;
+        return card;
+    }
+
 }
